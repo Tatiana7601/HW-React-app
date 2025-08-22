@@ -2,7 +2,7 @@ import {useState} from "react";
 
 function Greeting(){
     const [name, setName] = useState("");
-    const [message, setMessage]=useState("");
+    const [message, setMessage]=useState("Please enter your name");
 
    function handleChange(event){
         setName(event.target.value);
@@ -21,7 +21,7 @@ function Greeting(){
         <div style={{ marginTop: "100px", textAlign: "center" }}>
             <input type="text" value={name} onChange={handleChange}/>
             <button onClick={handleGreet}>Click</button>
-            {message && <h2>{message}</h2>}
+            {message && <h1>{message}</h1>}
         </div>
     );
 }
